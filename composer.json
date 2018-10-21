@@ -12,12 +12,6 @@
   "support": {
     "issues": "https://github.com/alexsancho/smart-lib/issues"
   },
-  "repositories": [
-    {
-      "type": "composer",
-      "url": "https://wpackagist.org"
-    }
-  ],
   "autoload": {
     "psr-4": {
       "Kec\\Smart\\": ""
@@ -31,8 +25,7 @@
     "aristath/kirki": "^3.0",
     "samrap/acf-fluent": "^0.4",
     "stoutlogic/acf-builder": "^1.8",
-    "johnbillion/extended-cpts": "^4.2",
-    "wpackagist-plugin/advanced-custom-fields": "^5.7",
+    "johnbillion/extended-cpts": "^4.2",,
     "brain/cortex": "~1.0.0"
   },
   "require-dev": {

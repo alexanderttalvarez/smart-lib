@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "ad930be3ab6e637cb1655fc1a48785da",
+    "content-hash": "7dad2cd67ae67f826ebc3e52a65eb40f",
     "packages": [
         {
             "name": "aristath/kirki",
@@ -1443,12 +1443,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/squizlabs/PHP_CodeSniffer.git",
-                "reference": "fe07fa21b2942a56834439da71374dcc8a424f6c"
+                "reference": "6c41eacda38eea5a4a26d9fdd27136261c38cf23"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/squizlabs/PHP_CodeSniffer/zipball/fe07fa21b2942a56834439da71374dcc8a424f6c",
-                "reference": "fe07fa21b2942a56834439da71374dcc8a424f6c",
+                "url": "https://api.github.com/repos/squizlabs/PHP_CodeSniffer/zipball/6c41eacda38eea5a4a26d9fdd27136261c38cf23",
+                "reference": "6c41eacda38eea5a4a26d9fdd27136261c38cf23",
                 "shasum": ""
             },
             "require": {
@@ -1486,7 +1486,7 @@
                 "phpcs",
                 "standards"
             ],
-            "time": "2018-10-16T14:19:50+00:00"
+            "time": "2018-10-20T07:48:02+00:00"
         }
     ],
     "aliases": [],

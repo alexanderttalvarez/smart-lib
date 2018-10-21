@@ -17,6 +17,7 @@
       "Kec\\Smart\\": ""
     }
   },
+  "minimum-stability": "dev",
   "require": {
     "php": ">=7.1",
     "composer/installers": "~1.0",
@@ -25,7 +26,7 @@
     "aristath/kirki": "^3.0",
     "samrap/acf-fluent": "^0.4",
     "stoutlogic/acf-builder": "^1.8",
-    "johnbillion/extended-cpts": "^4.2",,
+    "johnbillion/extended-cpts": "^4.2",
     "brain/cortex": "~1.0.0"
   },
   "require-dev": {

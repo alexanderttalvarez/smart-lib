@@ -4,8 +4,66 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "b64f7a9bdc0e9dbc44ddd6f92c7cd0dd",
+    "content-hash": "7139ed0126854c5fa70948f2e61efc91",
     "packages": [
+        {
+            "name": "aristath/kirki",
+            "version": "v3.0.34",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/aristath/kirki.git",
+                "reference": "8fb938f34e8093cbfa887ca9349898dd5a9084af"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/aristath/kirki/zipball/8fb938f34e8093cbfa887ca9349898dd5a9084af",
+                "reference": "8fb938f34e8093cbfa887ca9349898dd5a9084af",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.2"
+            },
+            "require-dev": {
+                "codacy/coverage": "dev-master",
+                "composer/installers": "*",
+                "dealerdirect/phpcodesniffer-composer-installer": "*",
+                "php-coveralls/php-coveralls": "^2.0",
+                "phpcompatibility/phpcompatibility-wp": "*",
+                "phpunit/phpunit": "*",
+                "wp-coding-standards/wpcs": "*"
+            },
+            "type": "library",
+            "autoload": {
+                "files": [
+                    "kirki.php"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "aristath",
+                    "email": "aristath@gmail.com",
+                    "homepage": "https://aristath.github.io",
+                    "role": "Developer"
+                },
+                {
+                    "name": "fovoc",
+                    "email": "kalliris.d@gmail.com",
+                    "homepage": "https://github.com/fovoc",
+                    "role": "Developer"
+                }
+            ],
+            "description": "Extending the WordPress customizer",
+            "homepage": "https://aristath.github.io/kirki",
+            "keywords": [
+                "customizer",
+                "wordpress"
+            ],
+            "time": "2018-09-14T19:07:16+00:00"
+        },
         {
             "name": "composer/installers",
             "version": "v1.6.0",
@@ -192,6 +250,60 @@
                 "string"
             ],
             "time": "2018-01-09T20:05:19+00:00"
+        },
+        {
+            "name": "doctrine/instantiator",
+            "version": "1.0.5",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/doctrine/instantiator.git",
+                "reference": "8e884e78f9f0eb1329e445619e04456e64d8051d"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/doctrine/instantiator/zipball/8e884e78f9f0eb1329e445619e04456e64d8051d",
+                "reference": "8e884e78f9f0eb1329e445619e04456e64d8051d",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3,<8.0-DEV"
+            },
+            "require-dev": {
+                "athletic/athletic": "~0.1.8",
+                "ext-pdo": "*",
+                "ext-phar": "*",
+                "phpunit/phpunit": "~4.0",
+                "squizlabs/php_codesniffer": "~2.0"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.0.x-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Doctrine\\Instantiator\\": "src/Doctrine/Instantiator/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Marco Pivetta",
+                    "email": "ocramius@gmail.com",
+                    "homepage": "http://ocramius.github.com/"
+                }
+            ],
+            "description": "A small, lightweight utility to instantiate objects in PHP without invoking their constructors",
+            "homepage": "https://github.com/doctrine/instantiator",
+            "keywords": [
+                "constructor",
+                "instantiate"
+            ],
+            "time": "2015-06-14T21:17:01+00:00"
         },
         {
             "name": "illuminate/config",
@@ -728,6 +840,96 @@
                 "simple-cache"
             ],
             "time": "2017-10-23T01:57:42+00:00"
+        },
+        {
+            "name": "samrap/acf-fluent",
+            "version": "v0.4.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/samrap/acf-fluent.git",
+                "reference": "55af7560a8c395088fa8e0cd424641bd20cdb8e0"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/samrap/acf-fluent/zipball/55af7560a8c395088fa8e0cd424641bd20cdb8e0",
+                "reference": "55af7560a8c395088fa8e0cd424641bd20cdb8e0",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=7.0"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "^6.0"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Samrap\\Acf\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Sam Rapaport",
+                    "email": "me@samrapdev.com"
+                }
+            ],
+            "description": "A fluent interface for the Advanced Custom Fields WordPress plugin",
+            "keywords": [
+                "acf",
+                "fluent",
+                "helper",
+                "interface",
+                "wordpress",
+                "wrapper"
+            ],
+            "time": "2018-02-01T21:44:09+00:00"
+        },
+        {
+            "name": "stoutlogic/acf-builder",
+            "version": "1.8.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/StoutLogic/acf-builder.git",
+                "reference": "68e3705505bc85b2d75e8e8d7fbb31181004b4cb"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/StoutLogic/acf-builder/zipball/68e3705505bc85b2d75e8e8d7fbb31181004b4cb",
+                "reference": "68e3705505bc85b2d75e8e8d7fbb31181004b4cb",
+                "shasum": ""
+            },
+            "require": {
+                "doctrine/inflector": "~1.1",
+                "doctrine/instantiator": "~1.0.0",
+                "php": ">=5.4.0"
+            },
+            "require-dev": {
+                "phpdocumentor/reflection-docblock": "2.*",
+                "phpunit/phpunit": "4.*",
+                "squizlabs/php_codesniffer": "^2.6"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "StoutLogic\\AcfBuilder\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "GPL-2.0+"
+            ],
+            "authors": [
+                {
+                    "name": "Steve Pfisterer",
+                    "email": "steve@stoutlogic.com"
+                }
+            ],
+            "description": "An Advanced Custom Field Configuration Builder",
+            "time": "2018-09-14T16:55:15+00:00"
         },
         {
             "name": "symfony/debug",

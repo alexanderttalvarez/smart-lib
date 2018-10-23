@@ -6,7 +6,7 @@ use Kirki;
 use Kec\Smart\Library;
 use Kec\Smart\Singleton;
 
-use function Theme\config;
+use function App\config;
 
 class Footer {
 	use Singleton;

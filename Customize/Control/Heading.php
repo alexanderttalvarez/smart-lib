@@ -24,9 +24,9 @@ class Heading extends \Kirki_Control_Base {
 	public function enqueue() {
 		wp_enqueue_style(
 			'smart-heading',
-			\Theme\asset_path( 'styles/customizer.css' ),
+			\App\asset_path( 'styles/customizer.css' ),
 			[],
-			\Theme\config( 'theme.version' )
+			\App\config( 'theme.version' )
 		);
 	}
 

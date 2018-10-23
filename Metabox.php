@@ -4,7 +4,7 @@ namespace Kec\Smart;
 
 use StoutLogic\AcfBuilder\FieldsBuilder;
 
-use function Theme\config;
+use function App\config;
 
 class Metabox {
 	use Singleton;

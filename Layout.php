@@ -2,7 +2,7 @@
 
 namespace Kec\Smart;
 
-use function Theme\post_id;
+use function App\post_id;
 
 class Layout {
 	use Singleton;

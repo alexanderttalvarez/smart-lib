@@ -3,8 +3,8 @@
 namespace Kec\Smart;
 
 use Kirki;
-use function Theme\config;
-use function Theme\asset_path;
+use function App\config;
+use function App\asset_path;
 
 class Customize {
 	use Singleton;

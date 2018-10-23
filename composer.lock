@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "f27bf447a536ac2f3e800bb93fa1963e",
+    "content-hash": "94d2aad414d97e3315a7ef4509d5caa1",
     "packages": [
         {
             "name": "aristath/kirki",
@@ -307,16 +307,16 @@
         },
         {
             "name": "illuminate/config",
-            "version": "v5.6.39",
+            "version": "v5.6.38",
             "source": {
                 "type": "git",
                 "url": "https://github.com/illuminate/config.git",
-                "reference": "61f4eb8145a1473577a9876471c92fa4de4718a7"
+                "reference": "e8158dff3189deed846c84c66c60fa68c21ee579"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/illuminate/config/zipball/61f4eb8145a1473577a9876471c92fa4de4718a7",
-                "reference": "61f4eb8145a1473577a9876471c92fa4de4718a7",
+                "url": "https://api.github.com/repos/illuminate/config/zipball/e8158dff3189deed846c84c66c60fa68c21ee579",
+                "reference": "e8158dff3189deed846c84c66c60fa68c21ee579",
                 "shasum": ""
             },
             "require": {
@@ -594,16 +594,16 @@
         },
         {
             "name": "illuminate/view",
-            "version": "v5.6.39",
+            "version": "v5.6.38",
             "source": {
                 "type": "git",
                 "url": "https://github.com/illuminate/view.git",
-                "reference": "60fd8f12340417a4312e5d90961510333d4f1d46"
+                "reference": "87645c175810ffe2969318d004138eb786b99dd9"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/illuminate/view/zipball/60fd8f12340417a4312e5d90961510333d4f1d46",
-                "reference": "60fd8f12340417a4312e5d90961510333d4f1d46",
+                "url": "https://api.github.com/repos/illuminate/view/zipball/87645c175810ffe2969318d004138eb786b99dd9",
+                "reference": "87645c175810ffe2969318d004138eb786b99dd9",
                 "shasum": ""
             },
             "require": {
@@ -638,7 +638,7 @@
             ],
             "description": "The Illuminate View package.",
             "homepage": "https://laravel.com",
-            "time": "2018-10-02T13:27:20+00:00"
+            "time": "2018-09-02T11:28:46+00:00"
         },
         {
             "name": "johnbillion/extended-cpts",

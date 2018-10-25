@@ -3,9 +3,8 @@
  * Elementor class
  *
  * @package    WordPress
- * @subpackage Almirall
+ * @subpackage Smart
  * @since      1.0.0
- * .0
  */
 
 namespace Kec\Smart;
@@ -16,7 +15,7 @@ use Elementor\Core\Files\CSS\Post;
 /**
  * Class Elementor
  *
- * @package Almirall
+ * @package Smart
  * @uses    \Elementor\Plugin
  * @uses    \Elementor\Core\Files\CSS\Post
  */
@@ -31,38 +30,57 @@ final class Elementor {
     private function init() {
         add_action( 'wp_enqueue_scripts', [ $this, 'enqueue_styles' ] );
 
-	    // Add support for Elementor Pro locations
-	    add_action( 'elementor/theme/register_locations', [ $this, 'register_locations' ] );
+        add_action( 'elementor/init', [ $this, 'init_panel_section' ], 0 );
+        add_action( 'elementor/elements/categories_registered', [ $this, 'init_panel_section' ] );
+
+        // Add support for Elementor Pro locations
+        add_action( 'elementor/theme/register_locations', [ $this, 'register_locations' ] );
     }
 
-	/**
-	 * Add support for Elementor Pro locations
-	 *
-	 * @since 1.0.0
-	 *
-	 * @param \ElementorPro\Modules\ThemeBuilder\Classes\Locations_Manager $elementor_theme_manager Elementor Theme Manager.
-	 */
-	public function register_locations( $elementor_theme_manager ) {
-		$elementor_theme_manager->register_all_core_location();
-	}
+    /**
+     * Sections init
+     *
+     * @since  1.0.0
+     *
+     * @access private
+     */
+    public function init_panel_section() {
+        // Add element category in panel
+        Plugin::instance()->elements_manager->add_category(
+            'smart-elements',
+            [ 'title' => esc_html_x( 'Smart Elements', 'Elementor', 'smart' ), ],
+            1
+        );
+    }
 
-	/**
-	 * Check if Elementor Plugin is active
-	 *
-	 * @return bool
-	 */
-	public static function is_active() : bool {
-		return class_exists( 'Elementor\Plugin' );
-	}
+    /**
+     * Add support for Elementor Pro locations
+     *
+     * @since 1.0.0
+     *
+     * @param \ElementorPro\Modules\ThemeBuilder\Classes\Locations_Manager $elementor_theme_manager Elementor Theme Manager.
+     */
+    public function register_locations( $elementor_theme_manager ) {
+        $elementor_theme_manager->register_all_core_location();
+    }
 
-	/**
-	 * Check if Elementor PRO Plugin is active
-	 *
-	 * @return bool
-	 */
-	public static function is_pro_active() : bool {
-		return class_exists( 'ElementorPro\Plugin' );
-	}
+    /**
+     * Check if Elementor Plugin is active
+     *
+     * @return bool
+     */
+    public static function is_active(): bool {
+        return class_exists( 'Elementor\Plugin' );
+    }
+
+    /**
+     * Check if Elementor PRO Plugin is active
+     *
+     * @return bool
+     */
+    public static function is_pro_active(): bool {
+        return class_exists( 'ElementorPro\Plugin' );
+    }
 
     /**
      * Get the top bar template ID.
@@ -155,10 +173,10 @@ final class Elementor {
 
         if ( class_exists( '\Elementor\Core\Files\CSS\Post' ) ) {
 
-            $topbar_id            = self::get_topbar_id();
-            $header_id               = self::get_header_id();
-            $footer_id            = self::get_footer_id();
-            $error_id             = self::get_error_page_id();
+            $topbar_id = self::get_topbar_id();
+            $header_id = self::get_header_id();
+            $footer_id = self::get_footer_id();
+            $error_id  = self::get_error_page_id();
 
             // Enqueue top bar content css file
             if ( false !== $topbar_id ) {

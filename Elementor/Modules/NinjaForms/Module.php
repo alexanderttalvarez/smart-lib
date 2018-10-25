@@ -7,7 +7,7 @@
  * @since      1.0.0
  */
 
-namespace Kec\Smart\Elementor\Modules\Acf;
+namespace Kec\Smart\Elementor\Modules\NinjaForms;
 
 use Kec\Smart\Elementor\Modules\Base;
 
@@ -16,9 +16,9 @@ class Module extends Base {
     /**
      * {@inheritdoc}
      */
-    public function get_widgets() : array {
+    public function get_widgets() {
         return [
-            'Acf',
+            'NinjaForms',
         ];
     }
 
@@ -26,6 +26,6 @@ class Module extends Base {
      * {@inheritdoc}
      */
     public function get_name() {
-        return 'smart-acf';
+        return 'smart-ninja-forms';
     }
 }

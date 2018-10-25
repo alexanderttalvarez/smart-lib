@@ -11,6 +11,8 @@ namespace Kec\Smart;
 
 use Elementor\Plugin;
 use Elementor\Core\Files\CSS\Post;
+use Kec\Smart\Elementor\Modules\Manager;
+use Kec\Smart\Elementor\Compatibility\WPML;
 
 /**
  * Class Elementor
@@ -23,6 +25,16 @@ final class Elementor {
     use Singleton;
 
     /**
+     * @var Manager
+     */
+    public $modules_manager;
+
+    /**
+     * @var WPML
+     */
+    public $wpml_compatibility;
+
+    /**
      * Initialize hooks
      *
      * @since 1.0.0
@@ -30,6 +42,10 @@ final class Elementor {
     private function init() {
         add_action( 'wp_enqueue_scripts', [ $this, 'enqueue_styles' ] );
 
+        add_action( 'elementor/init', function () {
+            $this->modules_manager    = Manager::get_instance();
+            $this->wpml_compatibility = WPML::get_instance();
+        }, 0 );
         add_action( 'elementor/init', [ $this, 'init_panel_section' ], 0 );
         add_action( 'elementor/elements/categories_registered', [ $this, 'init_panel_section' ] );
 

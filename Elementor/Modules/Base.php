@@ -47,12 +47,12 @@ abstract class Base {
      * @return static
      * @since 1.0.0
      */
-    public static function instance() {
-        if ( empty( static::$_instances[ static::class_name() ] ) ) {
-            static::$_instances[ static::class_name() ] = new static();
+    public static function get_instance() {
+        if ( empty( static::$instances[ static::class_name() ] ) ) {
+            static::$instances[ static::class_name() ] = new static();
         }
 
-        return static::$_instances[ static::class_name() ];
+        return static::$instances[ static::class_name() ];
     }
 
 
@@ -99,5 +99,7 @@ abstract class Base {
      *
      * @return array
      */
-    abstract public function get_widgets() : array ;
+     public function get_widgets() : array {
+        return [];
+    }
 }

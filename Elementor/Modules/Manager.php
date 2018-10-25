@@ -20,7 +20,7 @@ class Manager {
     private $modules = [];
 
     protected function init() {
-        $thia->register_modules();
+        $this->register_modules();
     }
 
     /**
@@ -28,34 +28,38 @@ class Manager {
      */
     private function register_modules() {
 
+        $modules = [
+            'query-post',
+        ];
+
         // If Advanced Custom Fields
-        if ( self::is_acf_active() ) {
+        if ( class_exists( 'acf' ) ) {
             $modules[] = 'acf';
         }
 
-        // If Contact Form 7
-        if ( self::is_contact_form_7_active() ) {
-            $modules[] = 'contact-form';
-        }
-
-        // If WPForms
-        if ( self::is_wpforms_active() ) {
-            $modules[] = 'wpforms';
-        }
-
-        // If Gravity Forms
-        if ( self::is_gravity_forms_active() ) {
-            $modules[] = 'gravity-forms';
-        }
-
         // If Caldera Forms
-        if ( self::is_caldera_forms_active() ) {
+        if ( class_exists( 'Caldera_Forms' ) ) {
             $modules[] = 'caldera-forms';
         }
 
+        // If Contact Form 7
+        if ( class_exists( 'WPCF7_ContactForm' ) ) {
+            $modules[] = 'contact-form';
+        }
+
+        // If Gravity Forms
+        if ( class_exists( 'GFCommon' ) ) {
+            $modules[] = 'gravity-forms';
+        }
+
         // If Ninja Forms
-        if ( self::is_ninja_forms_active() ) {
+        if ( class_exists( 'Ninja_Forms' ) ) {
             $modules[] = 'ninja-forms';
+        }
+
+        // If WPForms
+        if ( class_exists( 'WPForms' ) ) {
+            $modules[] = 'wpforms';
         }
 
         foreach ( $modules as $module_name ) {
@@ -65,101 +69,5 @@ class Manager {
 
             $this->modules[ $module_name ] = $class_name::get_instance();
         }
-    }
-
-    /**
-     * Check if Advanced Custom Fields plugin is active
-     *
-     * @since 1.0.0
-     *
-     */
-    public static function is_acf_active() {
-        $return = false;
-
-        if ( class_exists( 'acf' ) ) {
-            $return = true;
-        }
-
-        return $return;
-    }
-
-    /**
-     * Check if Contact Form 7 plugin is active
-     *
-     * @since 1.0.0
-     *
-     */
-    public static function is_contact_form_7_active() {
-        $return = false;
-
-        if ( class_exists( 'WPCF7_ContactForm' ) ) {
-            $return = true;
-        }
-
-        return $return;
-    }
-
-    /**
-     * Check if WPForms plugin is active
-     *
-     * @since 1.0.0
-     *
-     */
-    public static function is_wpforms_active() {
-        $return = false;
-
-        if ( class_exists( 'WPForms' ) ) {
-            $return = true;
-        }
-
-        return $return;
-    }
-
-    /**
-     * Check if Gravity Forms plugin is active
-     *
-     * @since 1.0.0
-     *
-     */
-    public static function is_gravity_forms_active() {
-        $return = false;
-
-        if ( class_exists( 'GFCommon' ) ) {
-            $return = true;
-        }
-
-        return $return;
-    }
-
-    /**
-     * Check if Caldera Forms plugin is active
-     *
-     * @since 1.0.0
-     *
-     */
-    public static function is_caldera_forms_active() {
-        $return = false;
-
-        if ( class_exists( 'Caldera_Forms' ) ) {
-            $return = true;
-        }
-
-        return $return;
-    }
-
-    /**
-     * Check if Ninja Forms plugin is active
-     *
-     * @since 1.0.0
-     *
-     */
-    public static function is_ninja_forms_active() {
-        $return = false;
-
-        if ( class_exists( 'Ninja_Forms' ) ) {
-            $return = true;
-        }
-
-        return $return;
     }
 }

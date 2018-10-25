@@ -28,7 +28,7 @@ class Acf extends Widget_Base {
      * {@inheritdoc}
      */
     public function get_title() {
-        return __( 'ACF', 'smart' );
+        return _x( 'ACF', 'elementor', 'smart' );
     }
 
     /**
@@ -43,7 +43,7 @@ class Acf extends Widget_Base {
      * {@inheritdoc}
      */
     public function get_categories() {
-        return [ 'oceanwp-elements' ];
+        return [ 'smart-elements' ];
     }
 
     /**
@@ -54,14 +54,14 @@ class Acf extends Widget_Base {
         $this->start_controls_section(
             'section_acf',
             [
-                'label' => __( 'ACF', 'smart' ),
+                'label' => _x( 'ACF', 'elementor', 'smart' ),
             ]
         );
 
         $this->add_control(
             'field_name',
             [
-                'label'   => __( 'Field Name', 'smart' ),
+                'label'   => _x( 'Field Name', 'elementor', 'smart' ),
                 'type'    => Controls_Manager::TEXT,
                 'dynamic' => [ 'active' => true ],
             ]
@@ -70,12 +70,12 @@ class Acf extends Widget_Base {
         $this->add_control(
             'field_type',
             [
-                'label'   => __( 'Field Type', 'smart' ),
+                'label'   => _x( 'Field Type', 'elementor', 'smart' ),
                 'type'    => Controls_Manager::SELECT,
                 'default' => 'text',
                 'options' => [
-                    'text' => __( 'Text', 'smart' ),
-                    'link' => __( 'Link', 'smart' ),
+                    'text' => _x( 'Text', 'elementor', 'smart' ),
+                    'link' => _x( 'Link', 'elementor', 'smart' ),
                 ],
             ]
         );
@@ -83,7 +83,7 @@ class Acf extends Widget_Base {
         $this->add_control(
             'link_text',
             [
-                'label'     => __( 'Link Text', 'smart' ),
+                'label'     => _x( 'Link Text', 'elementor', 'smart' ),
                 'type'      => Controls_Manager::TEXT,
                 'condition' => [
                     'field_type' => 'link',
@@ -95,12 +95,12 @@ class Acf extends Widget_Base {
         $this->add_control(
             'link_target',
             [
-                'label'     => __( 'Link Target', 'smart' ),
+                'label'     => _x( 'Link Target', 'elementor', 'smart' ),
                 'type'      => Controls_Manager::SELECT,
                 'default'   => 'self',
                 'options'   => [
-                    'self'  => __( 'Self', 'smart' ),
-                    'blank' => __( 'Blank', 'smart' ),
+                    'self'  => _x( 'Self', 'elementor', 'smart' ),
+                    'blank' => _x( 'Blank', 'elementor', 'smart' ),
                 ],
                 'condition' => [
                     'field_type' => 'link',
@@ -111,7 +111,7 @@ class Acf extends Widget_Base {
         $this->add_control(
             'link_nofollow',
             [
-                'label'     => __( 'Add Nofollow', 'smart' ),
+                'label'     => _x( 'Add Nofollow', 'elementor', 'smart' ),
                 'type'      => Controls_Manager::SWITCHER,
                 'condition' => [
                     'field_type' => 'link',
@@ -122,7 +122,7 @@ class Acf extends Widget_Base {
         $this->add_control(
             'field_label',
             [
-                'label'   => __( 'Label', 'smart' ),
+                'label'   => _x( 'Label', 'elementor', 'smart' ),
                 'type'    => Controls_Manager::TEXT,
                 'dynamic' => [ 'active' => true ],
             ]
@@ -131,7 +131,7 @@ class Acf extends Widget_Base {
         $this->add_control(
             'icon',
             [
-                'label'   => __( 'Icon', 'smart' ),
+                'label'   => _x( 'Icon', 'elementor', 'smart' ),
                 'type'    => Controls_Manager::ICON,
                 'default' => '',
             ]
@@ -140,12 +140,12 @@ class Acf extends Widget_Base {
         $this->add_control(
             'icon_align',
             [
-                'label'     => __( 'Icon Position', 'smart' ),
+                'label'     => _x( 'Icon Position', 'elementor', 'smart' ),
                 'type'      => Controls_Manager::SELECT,
                 'default'   => 'left',
                 'options'   => [
-                    'left'  => __( 'Before', 'smart' ),
-                    'right' => __( 'After', 'smart' ),
+                    'left'  => _x( 'Before', 'elementor', 'smart' ),
+                    'right' => _x( 'After', 'elementor', 'smart' ),
                 ],
                 'condition' => [
                     'icon!' => '',
@@ -156,7 +156,7 @@ class Acf extends Widget_Base {
         $this->add_control(
             'icon_indent',
             [
-                'label'     => __( 'Icon Spacing', 'smart' ),
+                'label'     => _x( 'Icon Spacing', 'elementor', 'smart' ),
                 'type'      => Controls_Manager::SLIDER,
                 'range'     => [
                     'px' => [
@@ -176,19 +176,19 @@ class Acf extends Widget_Base {
         $this->add_responsive_control(
             'align',
             [
-                'label'     => __( 'Alignment', 'smart' ),
+                'label'     => _x( 'Alignment', 'elementor', 'smart' ),
                 'type'      => Controls_Manager::CHOOSE,
                 'options'   => [
                     'left'   => [
-                        'title' => __( 'Left', 'smart' ),
+                        'title' => _x( 'Left', 'elementor', 'smart' ),
                         'icon'  => 'fa fa-align-left',
                     ],
                     'center' => [
-                        'title' => __( 'Center', 'smart' ),
+                        'title' => _x( 'Center', 'elementor', 'smart' ),
                         'icon'  => 'fa fa-align-center',
                     ],
                     'right'  => [
-                        'title' => __( 'Right', 'smart' ),
+                        'title' => _x( 'Right', 'elementor', 'smart' ),
                         'icon'  => 'fa fa-align-right',
                     ],
                 ],
@@ -204,7 +204,7 @@ class Acf extends Widget_Base {
         $this->start_controls_section(
             'section_style',
             [
-                'label' => __( 'Field', 'smart' ),
+                'label' => _x( 'Field', 'elementor', 'smart' ),
                 'tab'   => Controls_Manager::TAB_STYLE,
             ]
         );
@@ -221,7 +221,7 @@ class Acf extends Widget_Base {
         $this->add_control(
             'field_color',
             [
-                'label'     => __( 'Color', 'smart' ),
+                'label'     => _x( 'Color', 'elementor', 'smart' ),
                 'type'      => Controls_Manager::COLOR,
                 'default'   => '',
                 'selectors' => [
@@ -235,7 +235,7 @@ class Acf extends Widget_Base {
         $this->start_controls_section(
             'section_label_style',
             [
-                'label'     => __( 'Label', 'smart' ),
+                'label'     => _x( 'Label', 'elementor', 'smart' ),
                 'tab'       => Controls_Manager::TAB_STYLE,
                 'condition' => [
                     'field_label!' => '',
@@ -258,7 +258,7 @@ class Acf extends Widget_Base {
         $this->add_control(
             'label_color',
             [
-                'label'     => __( 'Color', 'smart' ),
+                'label'     => _x( 'Color', 'elementor', 'smart' ),
                 'type'      => Controls_Manager::COLOR,
                 'default'   => '',
                 'selectors' => [
@@ -275,7 +275,7 @@ class Acf extends Widget_Base {
         $this->start_controls_section(
             'section_icon_style',
             [
-                'label'     => __( 'Icon', 'smart' ),
+                'label'     => _x( 'Icon', 'elementor', 'smart' ),
                 'tab'       => Controls_Manager::TAB_STYLE,
                 'condition' => [
                     'icon!' => '',
@@ -286,7 +286,7 @@ class Acf extends Widget_Base {
         $this->add_control(
             'icon_color',
             [
-                'label'     => __( 'Color', 'smart' ),
+                'label'     => _x( 'Color', 'elementor', 'smart' ),
                 'type'      => Controls_Manager::COLOR,
                 'default'   => '',
                 'selectors' => [
@@ -301,7 +301,7 @@ class Acf extends Widget_Base {
         $this->add_responsive_control(
             'icon_size',
             [
-                'label'     => __( 'Size', 'smart' ),
+                'label'     => _x( 'Size', 'elementor', 'smart' ),
                 'type'      => Controls_Manager::SLIDER,
                 'range'     => [
                     'px' => [

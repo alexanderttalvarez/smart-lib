@@ -17,7 +17,7 @@ class WPML {
     protected function init() {
 
         // WPML String Translation plugin exist check
-        if ( is_wpml_string_translation_active() ) {
+        if ( self::is_wpml_string_translation_active() ) {
             add_filter( 'wpml_elementor_widgets_to_translate', [ $this, 'add_translatable_nodes' ] );
         }
     }
@@ -55,4 +55,10 @@ class WPML {
         ];
 
     }
+
+    private static function is_wpml_string_translation_active() {
+  		include_once( ABSPATH . 'wp-admin/includes/plugin.php' );
+
+  		return is_plugin_active( 'wpml-string-translation/plugin.php' );
+  	}
 }

@@ -541,19 +541,19 @@ class Layout {
 		return apply_filters( 'smart/both_sidebars_classes', $class );
 	}
 
-	/**
-	 * @return bool
-	 */
-	public static function has_page_header(): bool {
-		return get_post_meta( post_id(), 'smart_disable_title', true ) !== 'on';
-	}
+    /**
+     * @return bool
+     */
+    public static function has_page_header(): bool {
+        return !( get_post_meta( post_id(), 'smart_disable_title', true ) !== 'on' );
+    }
 
-	/**
-	 * @return bool
-	 */
-	public static function has_page_header_heading(): bool {
-		return get_post_meta( post_id(), 'smart_disable_heading', true ) !== 'on';
-	}
+    /**
+     * @return bool
+     */
+    public static function has_page_header_heading(): bool {
+        return !( get_post_meta( post_id(), 'smart_disable_heading', true ) !== 'on' );
+    }
 
 	/**
 	 * @param string $context

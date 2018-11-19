@@ -545,14 +545,16 @@ class Layout {
      * @return bool
      */
     public static function has_page_header(): bool {
-        return !( get_post_meta( post_id(), 'smart_disable_title', true ) !== 'on' );
+        $show_title = get_post_meta( post_id(), 'smart_disable_title', true );
+        return ( $show_title === 'default' || $show_title === 'on' || $show_title === false );
     }
 
     /**
      * @return bool
      */
     public static function has_page_header_heading(): bool {
-        return !( get_post_meta( post_id(), 'smart_disable_heading', true ) !== 'on' );
+        $show_heading = get_post_meta( post_id(), 'smart_disable_heading', true );
+        return ( $show_heading === 'default' || $show_heading === 'on' || $show_heading === false );
     }
 
 	/**
